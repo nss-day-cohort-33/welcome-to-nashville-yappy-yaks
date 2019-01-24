@@ -36,6 +36,21 @@ To help you along, here is a wireframe of how your app might look
 
 ![welcome wireframe](./welcome_nash_wireframe2.png)
 
+## Notes about the APIs
+
+### Eventbrite
+
+1. You need to specify "no-cors" mode on your fetches
+1. You need to specify the Accept header on the request
+    ```
+    fetch(eventbrite_url, {
+      "headers": {
+          "Accept": "application/json"
+      },
+      "mode": "no-cors"
+    }
+    ```
+
 ## Stretch Goal
 Persist your itinerary with Json-Server. You only need to have a single itinerary. If the user selects a different park, restaurant, etc, use a PUT to update the itinerary with the new data.
 
