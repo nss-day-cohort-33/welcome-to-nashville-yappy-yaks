@@ -38,18 +38,39 @@ To help you along, here is a wireframe of how your app might look
 
 ## Notes about the APIs
 
-### Eventbrite
+### Eventbrite API
 
 1. You need to specify "no-cors" mode on your fetches
+1. The `location.address=nashville` query string parameter must be in the URL.
 1. You need to specify the Accept header on the request
-    ```
-    fetch(eventbrite_url, {
+    ```js
+    fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${search string}&location.address=nashville&token=${your token}`, {
       "headers": {
           "Accept": "application/json"
       },
       "mode": "no-cors"
     }
     ```
+
+### Zomato API
+
+Here's an example fetch to search restuarants in Nashville.
+
+* 1138 is the `id` for the city of Nashville
+* `entity_type` must be set to `city`
+* Your API key must be added as `user-key` to the `headers` configuration for your request
+
+```js
+fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating", {
+        headers: {
+            "Accept": "application/json",
+            "user-key": "10101010101010101010"
+        }
+    })
+    .then(r => r.json())
+    .then(results => {
+    })
+```
 
 ## Stretch Goal
 Persist your itinerary with Json-Server. You only need to have a single itinerary. If the user selects a different park, restaurant, etc, use a PUT to update the itinerary with the new data.
