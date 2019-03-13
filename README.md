@@ -23,12 +23,12 @@ When the user searches for any of the four categories of things to do, the resul
 
 ## Professional Requirements
 
-1. Only one itinerary needs to exist at a time. If a user selects an item to add to the itinerary, and an item already exists for that category in the itinerary, then you will need to update the itinerary with the new data
-1. All teammates must be using Grunt to run ESLint, http-server, and json-server during development
+1. Only one itinerary needs to exist at a time. If a user selects an item to add to the itinerary, and an item already exists for that category in the itinerary, then you will need to update the corresponding itinerary item in the DOM with the new data.
+1. All teammates must be using Grunt to run ESLint, and http-server during development. `json-server` should only be used if you have time to work on the stretch goal (_see below_).
 1. Each teammate is responsible for one API module. If your group has five members, one person is responsible for the module that interacts with the DOM and the data from the API modules. In a four-person team, the team will decide how to handle the development of that module.
 1. The README for your project should include instructions on how another person can download and run the application. PRO TIP: Don't wait until the very end to create the README.
-1. DO NOT FORGET to use a `.gitignore` file to keep git from tracking your node_modules folder
-1. Styling is strictly _secondary_, beyond necessary display formatting. Do not add any additional visual enhancements until you have a fully functional app. The goal of every member of the team is to implement functionality with JavaScript
+1. DO NOT FORGET to use a `.gitignore` file to keep git from tracking your node_modules folder.
+1. Styling is strictly _secondary_, beyond necessary display formatting. Do not add any additional visual enhancements until you have a fully functional app. The goal of every member of the team is to implement functionality with JavaScript.
 
 ## Visual Feature List
 
@@ -40,15 +40,13 @@ To help you along, here is a wireframe of how your app might look
 
 ### Eventbrite API
 
-1. You need to specify "no-cors" mode on your fetches
 1. The `location.address=nashville` query string parameter must be in the URL.
-1. You need to specify the Accept header on the request
+1. You need to specify the `Accept` header on the request
     ```js
     fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${search string}&location.address=nashville&token=${your token}`, {
       "headers": {
           "Accept": "application/json"
-      },
-      "mode": "no-cors"
+      }
     }
     ```
 
@@ -73,7 +71,8 @@ fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
 ```
 
 ## Stretch Goal
-Persist your itinerary with Json-Server. You only need to have a single itinerary. If the user selects a different park, restaurant, etc, use a PUT to update the itinerary with the new data.
+
+Persist your itinerary with `json-server`. You only need to have a single itinerary. If the user selects a different park, restaurant, etc, use a PUT to update the itinerary with the new data.
 
 To start you off, here's an example of what the itinerary in your API might look like in your database once it's created by the user.
 
