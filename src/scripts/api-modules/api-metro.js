@@ -1,4 +1,4 @@
-let searchPark = "playground=No";
+let searchPark = "";
 let searchParkResult = [];
 
 function callParks() {
@@ -8,7 +8,7 @@ function callParks() {
 
 callParks().then (parkArray => {
     for (let i = 0; i < parkArray.length; i++) {
-        let parkObject = Object.create(searchParkResult);
+        let parkObject = {};
         parkObject.name = parkArray[i].park_name;
         parkObject.location = parkArray[i].mapped_location_address;
         searchParkResult.push(parkObject);
