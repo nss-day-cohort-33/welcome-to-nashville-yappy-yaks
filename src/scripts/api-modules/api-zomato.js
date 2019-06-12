@@ -74,3 +74,11 @@ cuisinesGet.then(function(objectOfCuisines)
         console.log("results", restaurantResults)
     })
 })
+
+// submitButtons.forEach(button, i => 
+// {
+//     button.addEventListener("click", event =>
+//     {
+//         inputs[i].value
+//     })
+// })
