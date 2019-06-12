@@ -4,19 +4,29 @@
 // Other = KnvZfZ7vAvl 
 // folk = KnvZfZ7vAva
 
+let searchConcertResult = [];
 
-let thisThing = document.getElementById("concerts-input")
+let thisThing = document.getElementById("genre-choice").value
+
 document.querySelector(".concerts").addEventListener("click",function()  {
-    fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketKeys.appKey}&locale=*&startDateTime=2019-06-14T12:43:00Z&endDateTime=2019-06-20T12:43:00Z&city=Nashville&genreId=KnvZfZ7vAv6`)
+    fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketKeys.appKey}&locale=*&startDateTime=2019-06-14T12:43:00Z&endDateTime=2019-06-20T12:43:00Z&city=Nashville&genreId=${thisThing}`)
     .then(response => response.json())
     .then(concertData => { 
-        console.log(concertData)
+        console.log(thisThing)
+        // console.log(concertData)
         concertData._embedded.events.forEach(newThing => {
-         console.log(newThing.name, `at`,newThing._embedded.venues[0].name)
-         console.log(newThing._embedded.attractions[0].name, `at`, newThing._embedded.venues[0].name)
+        //  console.log(newThing.name, `at`,newThing._embedded.venues[0].name)
+        //  console.log(newThing._embedded.attractions[0].name, `at`, newThing._embedded.venues[0].name)
+
+         let concertObject = {}
+         concertObject.name = newThing._embedded.attractions[0].name
+         concertObject.location = newThing._embedded.venues[0].name
+         searchConcertResult.push(concertObject)
         })
 
     })
+
+    console.log(searchConcertResult)
 })
 
 

@@ -6,9 +6,3 @@ const submitButtons = document.querySelectorAll('.btn')
 const searchOutput = document.querySelector('#output-container')
 const itinerary = document.querySelector('#itinerary-container')
 
-function createFoodComponent(foodObj) {
-  return `
-    <h2>Header</h2>
-    <p>description</p>
-  `
-}
