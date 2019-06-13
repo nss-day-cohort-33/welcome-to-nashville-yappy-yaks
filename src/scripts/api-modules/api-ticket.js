@@ -18,7 +18,6 @@ function getConcerts(genre, className)
             concertObject.location = newThing._embedded.venues[0].name
             searchConcertResult.push(concertObject)
         })
-        console.log(searchConcertResult)
         addToDom(makeComponent(searchConcertResult), className)
     })
 }

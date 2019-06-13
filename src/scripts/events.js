@@ -39,8 +39,6 @@ function saveToItinerary(className) {
       button.addEventListener('click', event => {
         let buttonParent = button.parentElement.firstChild.textContent
   
-        console.log(button.parentElement.firstChild);
-        console.log(className)
         
   
         className.innerHTML = buttonParent

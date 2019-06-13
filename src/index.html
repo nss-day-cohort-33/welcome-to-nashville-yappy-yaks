@@ -5,59 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Nashville</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <!-- Search Container -->
     <section id="search-container">
-        <h1>Welcome To Nashville!</h1>
-        <p>Search for stuff to do today:</p>
-        <fieldset>
-                <label for="parks-selector">Parks by feature: </label>
-                <select name="parks-selector" id="parks-input">
-                        <option value="dog_park=Yes">Dog Park</option>
-                        <option value="swimming_pool=Yes">Pool</option>
-                        <option value="hiking_trails=Yes">Hiking Trails</option>
-                        <option value="canoe_launch=Yes">Canoe Launch</option>
-                        <option value="lake=Yes">Lake</option>
-                      </select>
-                    <button class="btn parks">Button</button>
-        </fieldset>
-        <fieldset>
-            <input type="text" name="" id="restaurants-input" placeholder="restaurants by food type">
-            <button class="btn restaurants">Button</button>
-        </fieldset>
-        <fieldset>
-            <input type="text" name="" id="meetups-input" placeholder="meetups by topic">
-            <button class="btn meetups">Button</button>
-        </fieldset>
-        <fieldset>
-            <label for="concerts-selector">Concerts by genre: </label>
-            <select name="concerts-selector" id="genre-choice">
-                <option value="KnvZfZ7vAv6">Country</option>
-                <option value="KnvZfZ7vAev">Pop</option>
-                <option value="KnvZfZ7vAeA">Rock</option>
-                <option value="KnvZfZ7vAva">Folk</option>
-                <option value="KnvZfZ7vAvl">Other</option>
-              </select>
-            <button class="btn concerts">Button</button>
-        </fieldset>
-    </section>
-    <!-- Output Container -->
-
-    <h1>Results</h1>
-    <section id="output-container">
-    </section>
-
-    <!-- Itinerary Container -->
-
-    <h1>My Itinerary</h1>
-    <section id="itinerary-container">
-        <div class="json-parks"></div>
-        <div class="json-foods"></div>
-        <div class="json-meetups"></div>
-        <div class="json-concerts"></div>
-        <button id="json-button">Save Itinerary!</button>
-    </section>
+        <div><h1>Welcome To Nashville!</h1>
+            <p>Search for stuff to do today:</p>
+            <fieldset>
+                    <label for="parks-selector">Parks by feature: </label>
+                    <select name="parks-selector" id="parks-input">
+                            <option value=""></option>
+                            <option value="dog_park=Yes">Dog Park</option>
+                            <option value="swimming_pool=Yes">Pool</option>
+                            <option value="hiking_trails=Yes">Hiking Trails</option>
+                            <option value="canoe_launch=Yes">Canoe Launch</option>
+                            <option value="lake=Yes">Lake</option>
+                          </select>
+                        <button class="btn parks">Search</button>
+            </fieldset>
+            <fieldset>
+                    <label for="parks-selector">Food by cuisine: </label>
+                <input type="text" name="" id="restaurants-input">
+                <button class="btn restaurants">Search</button>
+            </fieldset>
+            <fieldset>
+                    <label for="parks-selector">Meetups by topic: </label>
+                <input type="text" name="" id="meetups-input">
+                <button class="btn meetups">Search</button>
+            </fieldset>
+            <fieldset>
+                <label for="concerts-selector">Concerts by genre: </label>
+                <select name="concerts-selector" id="genre-choice">
+                    <option value=""></option>
+                    <option value="KnvZfZ7vAv6">Country</option>
+                    <option value="KnvZfZ7vAev">Pop</option>
+                    <option value="KnvZfZ7vAeA">Rock</option>
+                    <option value="KnvZfZ7vAva">Folk</option>
+                    <option value="KnvZfZ7vAvl">Other</option>
+                  </select>
+                <button class="btn concerts">Search</button>
+            </fieldset>
+        </section>
+        <!-- Output Container -->
+    
+        <h1>Results</h1>
+        <section id="output-container">
+        </section>
+    
+        <!-- Itinerary Container -->
+    
+        <h1>Itinerary</h1>
+        <section id="itinerary-container">
+            <div class="json-parks"></div>
+            <div class="json-foods"></div>
+            <div class="json-meetups"></div>
+            <div class="json-concerts"></div>
+            <button id="json-button">Save Itinerary!</button>
+        </section>
+    </div>
 
     <!-- Scripts -->
     <script src="scripts/keys.js"></script>

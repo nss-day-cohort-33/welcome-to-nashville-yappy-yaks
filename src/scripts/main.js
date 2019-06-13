@@ -6,7 +6,6 @@ const jsonItinerary = {
         response.json()
       )
       .then(data => {
-        console.log(data)
         parksContainer.textContent = data[0].park
         foodsContainer.textContent = data[0].food
         meetupsContainer.textContent = data[0].meetup

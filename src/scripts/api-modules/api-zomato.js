@@ -50,28 +50,22 @@ const API = {
                 if (keyList.length > 1 && (keyList.includes(cuisineObject.cuisine.cuisine_name)))
                 {
                     keys.push(cuisineObject.cuisine.cuisine_id);
-                    console.log("in if", keys)
                 }
                 else if (keyList.length = 1 && cuisineObject.cuisine.cuisine_name === keyword)
                 {
-                    console.log("typeof keys", typeof keys)
                     keys = cuisineObject.cuisine.cuisine_id;
                     cuisineId = keys;
                 }
             })
 
-            console.log(typeof keys)
 
             if (typeof keys == "object")
             {
-                console.log("keys", keys)
                 keys = keys.join(",");
-                console.log("keys", keys)
                 cuisineId = keys;
             }
             
             
-            console.log(cuisineId)
 
             // Executes the initial restaurant call and uses the cuisine_id from the for loop above
             let restaurantGet = callRestaurant();
@@ -90,7 +84,6 @@ const API = {
                     object.location = restaurantObject.restaurant.location.address;
                     restaurantResults.push(object);
                 })
-                console.log(restaurantResults)
                 addToDom(makeComponent(restaurantResults), className)
             })
         })
