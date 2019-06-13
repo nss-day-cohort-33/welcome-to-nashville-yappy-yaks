@@ -5,6 +5,7 @@ const inputs = document.querySelectorAll('input')
 const submitButtons = document.querySelectorAll('.btn')
 const searchOutput = document.querySelector('#output-container')
 const itinerary = document.querySelector('#itinerary-container')
+const parkDropdown = document.querySelector('#parks-input')
 
 function makeComponent(array)
 {

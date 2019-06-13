@@ -30,22 +30,9 @@ function getBriteData(searchTerm) {
   );
 }
 
-function saveToItinerary () {
-  document.querySelectorAll(".sv-btn").forEach((button, i) => {
-    button.addEventListener('click', event => {
-      let buttonParent = button.parentElement.textContent
-
-      console.log(button.parentElement.textContent);
-      
-
-      document.querySelector('#itinerary-container').innerHTML = buttonParent
-    })
-  })
-}
-
 //on click, do stuff
-document.querySelector(".meetups").addEventListener("click", () => {
-  const searchValue = document.querySelector("#meetups-input").value;
+function getEvents(searchValue)
+{
   let newStr;
   document.querySelector("#output-container").innerHTML = "";
 
@@ -62,29 +49,10 @@ document.querySelector(".meetups").addEventListener("click", () => {
     newStr = "";
 
     getBriteData(searchValue).then(()=>{
-
-      newStr = `
-        <section>
-          <ol>`;
-  
-      // for each element in arr, display as li with a save btn
-      for (let i = 0; i < briteSearchResults.length && i < 10; i++) {
-        let result = briteSearchResults[i];
-        newStr += `<li id="result-${i}">${result.name} <button class="sv-btn save-${i}">Save</button></li>`;
-        // newStr += ``
-      }
-      // close html
-      newStr += `
-        </ol>
-        </section>
-        `;
-
-        // add to search result container
-        document.querySelector("#output-container").innerHTML = newStr;
-        saveToItinerary()
+        addToDom(makeComponent(briteSearchResults))
     });// End .then
   }
-
-});
+}
+  
 
 
