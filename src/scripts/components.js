@@ -37,14 +37,12 @@ function makeComponent(array)
         </section>
         `;
         
-        console.log(newStr)
       return newStr
 
 }
 
 function addToDom(string, className)
 {
-    console.log("classname", className)
     searchOutput.innerHTML = string;
     saveToItinerary(className)
 }
