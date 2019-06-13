@@ -5,14 +5,6 @@ let restaurantObj = "";
 let restaurantResults = [];
 let keys = [];
 
-// submitButtons.forEach(button, i => 
-// {
-//     button.addEventListener("click", event =>
-//     {
-//         inputs[i].value
-//     })
-// })
-
 const API = {
     callZomato: function(keyword) {
         // Initial api call to get the nashivlle cuisines table from zomato

@@ -1,9 +1,3 @@
-// pop = KnvZfZ7vAev
-// Country = KnvZfZ7vAv6
-// Rock = KnvZfZ7vAeA
-// Other = KnvZfZ7vAvl 
-// folk = KnvZfZ7vAva
-//adding coments will add lines of code
 let searchConcertResult = [];
 
 function getConcerts(genre)

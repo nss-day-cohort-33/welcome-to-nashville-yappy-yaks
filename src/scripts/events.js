@@ -6,14 +6,27 @@ submitButtons[0].addEventListener("click", event =>
 
 submitButtons[1].addEventListener("click", event =>
 {
-    API.callZomato(inputs[0].value)
-    // setTimeout(function() {}, 5000)
+    if (inputs[0].value)
+    {
+        API.callZomato(inputs[0].value)
+    }
+    else
+    {
+        alert("Enter food please")
+    }
 })
 
 submitButtons[2].addEventListener("click", event =>
 {
-    console.log("hello")
-    getEvents(inputs[1].value)
+    if (inputs[1].value)
+    {
+        getEvents(inputs[1].value)
+    }
+    else
+    {
+        alert("Enter event please")
+    }
+    
 })
 
 submitButtons[3].addEventListener("click", event =>
