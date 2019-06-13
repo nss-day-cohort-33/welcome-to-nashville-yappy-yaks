@@ -1,31 +1,29 @@
-// pop = KnvZfZ7vAev
-// Country = KnvZfZ7vAv6
-// Rock = KnvZfZ7vAeA
-// Other = KnvZfZ7vAvl 
-// folk = KnvZfZ7vAva
-//adding coments will add lines of code
 let searchConcertResult = [];
-let thisThing = document.getElementById("genre-choice")
-document.querySelector(".concerts").addEventListener("click",function()  {
-     callTicket(thisThing.value)
+
+function getConcerts(genre, className)
+{
+    callTicket(genre)
     .then(concertData => { 
         //like this line
         searchConcertResult = []
         concertData._embedded.events.forEach(newThing => {
-         let concertObject = {}
-         if(newThing._embedded.attractions){
-         concertObject.name = newThing._embedded.attractions[0].name
-         }
-         else{
-             concertObject.name = newThing.name
-         }
-         //and this line
-         concertObject.location = newThing._embedded.venues[0].name
-         searchConcertResult.push(concertObject)
+            let concertObject = {}
+            if(newThing._embedded.attractions){
+            concertObject.name = newThing._embedded.attractions[0].name
+            }
+            else{
+                concertObject.name = newThing.name
+            }
+            //and this line
+            concertObject.location = newThing._embedded.venues[0].name
+            searchConcertResult.push(concertObject)
         })
         console.log(searchConcertResult)
+        addToDom(makeComponent(searchConcertResult), className)
     })
-})
+}
+
+
 
 
 function callTicket(genre){

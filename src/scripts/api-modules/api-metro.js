@@ -7,17 +7,19 @@ function callParks(search) {
   .then(parkData => parkData.json());
 }
 
-parkBtn.addEventListener("click", function() {
-  callParks(parksInput.value)
-  .then(parkArray => {
-      searchParkResult = [];
-    for (let i = 0; i < parkArray.length; i++) {
-      let parkObject = {};
-      parkObject.name = parkArray[i].park_name;
-      parkObject.location = parkArray[i].mapped_location_address;
-      searchParkResult.push(parkObject);
-    }
-  });
+function getParks(className)
+{
+    callParks(parksInput.value)
+    .then(parkArray => {
+        searchParkResult = [];
+        for (let i = 0; i < parkArray.length; i++) {
+        let parkObject = {};
+        parkObject.name = parkArray[i].park_name;
+        parkObject.location = parkArray[i].mapped_location_address;
+        searchParkResult.push(parkObject);
+        }
+        addToDom(makeComponent(searchParkResult), className)
+    });
+}
 
-});
 

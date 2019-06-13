@@ -5,16 +5,8 @@ let restaurantObj = "";
 let restaurantResults = [];
 let keys = [];
 
-// submitButtons.forEach(button, i => 
-// {
-//     button.addEventListener("click", event =>
-//     {
-//         inputs[i].value
-//     })
-// })
-
 const API = {
-    callZomato: function(keyword) {
+    callZomato: function(keyword, className) {
         // Initial api call to get the nashivlle cuisines table from zomato
         function callCuisines()
         {
@@ -98,10 +90,8 @@ const API = {
                     restaurantResults.push(object);
                 })
                 console.log(restaurantResults)
+                addToDom(makeComponent(restaurantResults), className)
             })
         })
     }
   };
-
-  
-API.callZomato("Vietnamese, Jamaican, Chinese")
