@@ -102,6 +102,3 @@ const API = {
         })
     }
   };
-
-  
-API.callZomato("Vietnamese, Jamaican, Chinese")
