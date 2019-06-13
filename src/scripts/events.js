@@ -47,3 +47,31 @@ function saveToItinerary(className) {
       })
     })
   }
+
+
+
+
+
+
+jsonButton.addEventListener("click", event =>
+{
+    let pJSON = parksContainer.textContent
+    let fJSON = foodsContainer.textContent
+    let mJSON = meetupsContainer.textContent
+    let cJSON = concertsContainer.textContent
+    const newItinerary = `{
+        "park": "${pJSON}",
+        "food": "${fJSON}",
+        "meetup": "${mJSON}",
+        "concert": "${cJSON}"
+      }`;
+
+    fetch("http://localhost:3000/itinerary/1", {
+        // Replace "url" with your API's URL
+        method: "PUT",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: newItinerary
+    })
+})
