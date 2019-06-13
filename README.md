@@ -1,5 +1,10 @@
-#Our Readme
+# Yackity Yakz
+We the Best.
 
+## ChangeLog:
+* 6/11 -- Directory established
+* 6/12 -- API Integration
+* 6/13 -- 
 
 # Welcome to Nashville: Build an itinerary for a day trip to Music City
 
