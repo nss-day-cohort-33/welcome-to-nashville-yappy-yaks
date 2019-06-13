@@ -3,13 +3,14 @@
 // Rock = KnvZfZ7vAeA
 // Other = KnvZfZ7vAvl 
 // folk = KnvZfZ7vAva
-
+//adding coments will add lines of code
 let searchConcertResult = [];
 let thisThing = document.getElementById("genre-choice")
 document.querySelector(".concerts").addEventListener("click",function()  {
     fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketKeys.appKey}&locale=*&startDateTime=2019-06-14T12:43:00Z&endDateTime=2019-06-20T12:43:00Z&city=Nashville&genreId=${thisThing.value}`)
     .then(response => response.json())
     .then(concertData => { 
+        //like this line
         searchConcertResult = []
         concertData._embedded.events.forEach(newThing => {
          let concertObject = {}
@@ -19,12 +20,14 @@ document.querySelector(".concerts").addEventListener("click",function()  {
          else{
              concertObject.name = newThing.name
          }
+         //and this line
          concertObject.location = newThing._embedded.venues[0].name
          searchConcertResult.push(concertObject)
         })
         console.log(searchConcertResult)
     })
 })
+//hoping this works
 
 
 // let searchPark = "playground=No";
