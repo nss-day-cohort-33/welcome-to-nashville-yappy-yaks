@@ -10,9 +10,11 @@
 <body>
     <!-- Search Container -->
     <section id="search-container">
-        <div><h1>Welcome To Nashville!</h1>
-            <p>Search for stuff to do today:</p>
+        <img src="imgs/tennessee-flag-header.png" width="450px" />
+        <h1>Welcome To Nashville!</h1>
+            <p><strong>Search for stuff to do today: </strong></p>
             <fieldset>
+                <div class="flex">
                     <label for="parks-selector">Parks by feature: </label>
                     <select name="parks-selector" id="parks-input">
                             <option value=""></option>
@@ -23,18 +25,24 @@
                             <option value="lake=Yes">Lake</option>
                           </select>
                         <button class="btn parks">Search</button>
+                    </div>
             </fieldset>
             <fieldset>
+                    <div class="flex">
                     <label for="parks-selector">Food by cuisine: </label>
                 <input type="text" name="" id="restaurants-input">
                 <button class="btn restaurants">Search</button>
+                </div>
             </fieldset>
             <fieldset>
+                    <div class="flex">
                     <label for="parks-selector">Meetups by topic: </label>
                 <input type="text" name="" id="meetups-input">
                 <button class="btn meetups">Search</button>
+                </div>
             </fieldset>
             <fieldset>
+                    <div class="flex">
                 <label for="concerts-selector">Concerts by genre: </label>
                 <select name="concerts-selector" id="genre-choice">
                     <option value=""></option>
@@ -45,22 +53,25 @@
                     <option value="KnvZfZ7vAvl">Other</option>
                   </select>
                 <button class="btn concerts">Search</button>
+                </div>
             </fieldset>
         </section>
         <!-- Output Container -->
     
-        <h1>Results</h1>
+        <h3>Results</h3>
         <section id="output-container">
         </section>
     
         <!-- Itinerary Container -->
     
-        <h1>Itinerary</h1>
+        <h3>Itinerary</h3>
         <section id="itinerary-container">
+            <div class="border">
             <div class="json-parks"></div>
             <div class="json-foods"></div>
             <div class="json-meetups"></div>
             <div class="json-concerts"></div>
+            </div>
             <button id="json-button">Save Itinerary!</button>
         </section>
     </div>
