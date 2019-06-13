@@ -33,6 +33,7 @@ document.querySelector(".meetups").addEventListener("click", () => {
 
   // If no input or no search results
   if (!searchValue || briteSearchResults === 0) {
+  // if (briteSearchResults === 0) {
     newStr = `Sorry...No results for what you're looking for`;
 
     // else, execute fetch data and build html string
@@ -45,7 +46,7 @@ document.querySelector(".meetups").addEventListener("click", () => {
     // for each element in arr, display as li with a save btn
     for (let i = 0; i < briteSearchResults.length; i++) {
       const result = briteSearchResults[i];
-      newStr += `<li><button class="save">Save</button>${result.name}</li>`;
+      newStr += `<li><button class="save">Save</button> ${result.name}</li>`;
       
     }
     // close html
@@ -55,6 +56,6 @@ document.querySelector(".meetups").addEventListener("click", () => {
       `;
   }
 
-  // add to dom
+  // add to search result container
   document.querySelector("#output-container").innerHTML = newStr;
 });
