@@ -22,10 +22,10 @@ function makeComponent(array)
         </ol>
         </section>
         `;
-
+        
+        console.log(newStr)
       return newStr
 
-      console.log(newStr)
 }
 
 function addToDom(string)

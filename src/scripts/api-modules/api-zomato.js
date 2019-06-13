@@ -98,6 +98,7 @@ const API = {
                     restaurantResults.push(object);
                 })
                 console.log(restaurantResults)
+                addToDom(makeComponent(restaurantResults))
             })
         })
     }
