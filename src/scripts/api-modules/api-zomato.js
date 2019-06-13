@@ -6,7 +6,7 @@ let restaurantResults = [];
 let keys = [];
 
 const API = {
-    callZomato: function(keyword) {
+    callZomato: function(keyword, className) {
         // Initial api call to get the nashivlle cuisines table from zomato
         function callCuisines()
         {
@@ -90,7 +90,7 @@ const API = {
                     restaurantResults.push(object);
                 })
                 console.log(restaurantResults)
-                addToDom(makeComponent(restaurantResults))
+                addToDom(makeComponent(restaurantResults), className)
             })
         })
     }

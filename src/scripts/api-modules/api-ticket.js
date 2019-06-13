@@ -1,6 +1,6 @@
 let searchConcertResult = [];
 
-function getConcerts(genre)
+function getConcerts(genre, className)
 {
     callTicket(genre)
     .then(concertData => { 
@@ -19,7 +19,7 @@ function getConcerts(genre)
             searchConcertResult.push(concertObject)
         })
         console.log(searchConcertResult)
-        addToDom(makeComponent(searchConcertResult))
+        addToDom(makeComponent(searchConcertResult), className)
     })
 }
 

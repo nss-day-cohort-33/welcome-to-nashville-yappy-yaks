@@ -6,6 +6,10 @@ const submitButtons = document.querySelectorAll('.btn')
 const searchOutput = document.querySelector('#output-container')
 const itinerary = document.querySelector('#itinerary-container')
 const parkDropdown = document.querySelector('#parks-input')
+const parksContainer = document.querySelector('.json-parks')
+const foodsContainer = document.querySelector('.json-foods')
+const meetupsContainer = document.querySelector('.json-meetups')
+const concertsContainer = document.querySelector('.json-concerts')
 
 function makeComponent(array)
 {
@@ -37,7 +41,9 @@ function makeComponent(array)
 
 }
 
-function addToDom(string)
+function addToDom(string, className)
 {
+    console.log("classname", className)
     searchOutput.innerHTML = string;
+    saveToItinerary(className)
 }

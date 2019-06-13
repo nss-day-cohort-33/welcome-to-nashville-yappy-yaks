@@ -7,7 +7,7 @@ function callParks(search) {
   .then(parkData => parkData.json());
 }
 
-function getParks()
+function getParks(className)
 {
     callParks(parksInput.value)
     .then(parkArray => {
@@ -18,7 +18,7 @@ function getParks()
         parkObject.location = parkArray[i].mapped_location_address;
         searchParkResult.push(parkObject);
         }
-        addToDom(makeComponent(searchParkResult))
+        addToDom(makeComponent(searchParkResult), className)
     });
 }
 

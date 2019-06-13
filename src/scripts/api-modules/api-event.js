@@ -31,12 +31,12 @@ function getBriteData(searchTerm) {
 }
 
 //on click, do stuff
-function getEvents(searchValue)
+function getEvents(searchValue, className)
 {
   document.querySelector("#output-container").innerHTML = "";
 
     getBriteData(searchValue).then(()=>{
-        addToDom(makeComponent(briteSearchResults))
+        addToDom(makeComponent(briteSearchResults), className)
     });// End .then
 }
 
