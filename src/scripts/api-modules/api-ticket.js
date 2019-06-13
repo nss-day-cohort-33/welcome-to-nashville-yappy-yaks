@@ -7,8 +7,7 @@
 let searchConcertResult = [];
 let thisThing = document.getElementById("genre-choice")
 document.querySelector(".concerts").addEventListener("click",function()  {
-    fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketKeys.appKey}&locale=*&startDateTime=2019-06-14T12:43:00Z&endDateTime=2019-06-20T12:43:00Z&city=Nashville&genreId=${thisThing.value}`)
-    .then(response => response.json())
+     callTicket(thisThing.value)
     .then(concertData => { 
         //like this line
         searchConcertResult = []
@@ -27,21 +26,12 @@ document.querySelector(".concerts").addEventListener("click",function()  {
         console.log(searchConcertResult)
     })
 })
+
+
+function callTicket(genre){
+    return fetch(`https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketKeys.appKey}&locale=*&startDateTime=2019-06-14T12:43:00Z&endDateTime=2019-06-20T12:43:00Z&city=Nashville&genreId=${genre}`)
+    .then(response => response.json())
+}
 //hoping this works
 
 
-// let searchPark = "playground=No";
-// let searchParkResult = [];
-
-// function callParks() {
-//     return fetch (`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=${metroKeys.appId}&&${searchPark}`)
-//     .then( parkData => parkData.json()) 
-// }
-
-// callParks().then (parkArray => {
-//     for (let i = 0; i < parkArray.length; i++) {
-//         let parkObject = {};
-//         parkObject.name = parkArray[i].park_name;
-//         searchParkResult.push(parkObject);
-//     }
-// });
