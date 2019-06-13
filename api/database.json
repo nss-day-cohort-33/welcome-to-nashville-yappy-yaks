@@ -1,0 +1,11 @@
+{
+  "itinerary": [
+    {
+      "park": "East Park: 700 Woodland St",
+      "food": "Jamaicaway Restaurant & Catering: 900 Rosa L Parks Blvd, Nashville 37208",
+      "meetup": "Simmer: a chef series where good food and ideas come together",
+      "concert": "The Broomestix + Will Trotman: 3rd & Lindsley",
+      "id": 1
+    }
+  ]
+}

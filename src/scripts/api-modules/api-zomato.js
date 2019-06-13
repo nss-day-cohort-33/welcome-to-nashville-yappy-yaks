@@ -79,6 +79,7 @@ const API = {
             // This function takes the restaurant array and loops through it to get the individual objects
             restaurantGet.then(function(objectOfRestaurants)
             {
+                restaurantResults = []
                 restaurantObj = objectOfRestaurants;
                 // This loop creates an anonymous object and assigns the json information to it
                 // then it pushes those objects into a globally scoped array to be used elsewhere

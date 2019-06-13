@@ -10,6 +10,7 @@ const parksContainer = document.querySelector('.json-parks')
 const foodsContainer = document.querySelector('.json-foods')
 const meetupsContainer = document.querySelector('.json-meetups')
 const concertsContainer = document.querySelector('.json-concerts')
+const jsonButton = document.querySelector('#json-button')
 
 function makeComponent(array)
 {
