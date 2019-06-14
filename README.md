@@ -1,12 +1,19 @@
-# Yackity Yakz
-We the Best.
+# Welcome to Nashville!
+Planning things to do in Nashville has never been easier!
 
-## ChangeLog:
-* 6/11 -- Directory established
-* 6/12 -- API Integration
-* 6/13 -- 
+## How to use:
+Search for events, tickets, food, or parks in the respective field and click the search button.
+You will be provided with a list of options that can be saved to your active itinerary.
 
-# Welcome to Nashville: Build an itinerary for a day trip to Music City
+### Keep it simple
+To add variety to your plan, but still keeping things simple, your itinerary choices are limited to one per category.
+
+### ChangeLog:
+* 6.11 -- Directories established.
+* 6.12 -- Fetch data from APIs to be converted and collected.
+* 6.13 -- Added instructions, click event handlers, as well as template literals to convert the object data to dom elements. 
+
+<!-- # Welcome to Nashville: Build an itinerary for a day trip to Music City
 
 In this app users can search for four different things to do/visit in Nashville:
 * parks -- using the Nashville [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/xbru-cfzi)
@@ -17,12 +24,12 @@ In this app users can search for four different things to do/visit in Nashville:
 You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
 
 1. Functions
-1. Persistent data storage
-1. Github
-1. CSS
-1. Building DOM components
-1. Handling user events
-1. Modular code
+2. Persistent data storage
+3. Github
+4. CSS
+5. Building DOM components
+6. Handling user events
+7. Modular code
 
 ## Itinerary Builder
 
@@ -100,4 +107,4 @@ To start you off, here's an example of what the itinerary in your API might look
 ## Stretchier Goals
 * Add an affordance to finalize an itinerary, and start a new one.
   * Add ability to view one or all of the itineraries
-* Instead of displaying all the search fields, search results, and itinerary list at the same time, add a nav bar or other feature(s) for hiding/showing what the user wants to view
+* Instead of displaying all the search fields, search results, and itinerary list at the same time, add a nav bar or other feature(s) for hiding/showing what the user wants to view -->
