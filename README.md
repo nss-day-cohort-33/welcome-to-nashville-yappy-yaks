@@ -5,6 +5,8 @@ Planning things to do in Nashville has never been easier!
 Search for events, tickets, food, or parks in the respective field and click the search button.
 You will be provided with a list of options that can be saved to your active itinerary.
 
+note: When searching for food, the first word needs to be capitalized, and multiple words need to be separated by a comma
+
 ### Keep it simple
 To add variety to your plan, but still keeping things simple, your itinerary choices are limited to one per category.
 
