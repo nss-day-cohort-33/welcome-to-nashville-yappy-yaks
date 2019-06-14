@@ -3,25 +3,29 @@ let cuisineId = "";
 let cuisineObj = "";
 let restaurantObj = "";
 let restaurantResults = [];
-let keys = [];
+
+// Initial api call to get the nashivlle cuisines table from zomato
+function callCuisines()
+{
+    return fetch("https://developers.zomato.com/api/v2.1/cuisines?city_id=1138", {
+        headers: {
+            "Accept": "application/json",
+            "user-key": `${zomatoKeys.appKey}`
+        }
+    })
+    .then(cuisines => cuisines.json())
+    .then(objectOfCuisines => {
+        return objectOfCuisines;
+    })
+}
+
+// Creates a variable that executes the api call and takes that promise and sorts
+// the cuisine object to get the corresponding cuisine id
+let cuisinesGet = callCuisines();
+
 
 const API = {
     callZomato: function(keyword, className) {
-        // Initial api call to get the nashivlle cuisines table from zomato
-        function callCuisines()
-        {
-            return fetch("https://developers.zomato.com/api/v2.1/cuisines?city_id=1138", {
-                headers: {
-                    "Accept": "application/json",
-                    "user-key": `${zomatoKeys.appKey}`
-                }
-            })
-            .then(cuisines => cuisines.json())
-            .then(objectOfCuisines => {
-                return objectOfCuisines;
-            })
-        }
-
         // Fetches the first 10 restaurants based on the type of cuisine as searched for by the user
         function callRestaurant()
         {
@@ -35,14 +39,11 @@ const API = {
             .then(parsedRest => parsedRest)
         }
 
-        // Creates a variable that executes the api call and takes that promise and sorts
-        // the cuisine object to get the corresponding cuisine id
-        let cuisinesGet = callCuisines();
-
         // Waits for the initial api call to finish then sorts and runs the restaurants api call based on
         // the cuisine id.
         cuisinesGet.then(function(objectOfCuisines) 
         {
+            let keys = [];
             cuisineObj = objectOfCuisines;
             cuisineObj.cuisines.forEach(cuisineObject =>
             {
