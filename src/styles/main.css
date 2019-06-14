@@ -1,6 +1,6 @@
 body
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     width: 450px;
 }
 
@@ -29,10 +29,14 @@ button
     margin:  10px;
     padding: 10px;
     border-radius: 5px;
-    background: rgba(0, 0, 128, 0.671);
+    background: rgb(0, 59, 123);
     border: none;
     color: white;
     font-weight: bold;
+}
+
+button:hover {
+    background: rgb(0, 99, 204);
 }
 
 li
