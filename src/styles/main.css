@@ -1,7 +1,7 @@
-/* Do later */
 body
 {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Helvetica, Arial, sans-serif;
+    width: 450px;
 }
 
 fieldset 
@@ -9,13 +9,34 @@ fieldset
     border-style: none;
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    height: 30px;
+    width: 125px;
+}
+input {
+    height: 30px;
+}
+
 button
 {
-    margin: 0 10px;
-    padding: 5px;
-    border-radius: 10px;
-    background: lightgray;
-    border: 1px black solid;
+    margin:  10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(0, 59, 123);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: rgb(0, 99, 204);
 }
 
 li
@@ -23,9 +44,14 @@ li
     display: flex;
     flex-direction: row;
     margin: 10px 0;
+    justify-content: space-between;
 }
 
 #itinerary-container div
 {
     margin: 10px;
+}
+
+.border {
+    border: 2px dotted black;
 }
